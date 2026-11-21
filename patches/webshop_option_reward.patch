@@ -1,0 +1,15 @@
+diff --git a/agentenv-webshop/webshop/web_agent_site/engine/goal.py b/agentenv-webshop/webshop/web_agent_site/engine/goal.py
+index 18f71cc..81e942a 100644
+--- a/agentenv-webshop/webshop/web_agent_site/engine/goal.py
++++ b/agentenv-webshop/webshop/web_agent_site/engine/goal.py
+@@ -248,7 +248,9 @@ def get_reward(purchased_product, goal, price, options, **kwargs):
+ 
+     r_option, num_option_matches = get_option_reward(
+         list(options.values()),
+-        goal['goal_options'].items()
++        # Both sides must contain option values: a (key, value) tuple makes
++        # normalize_color use tuple membership instead of string matching.
++        list(goal['goal_options'].values())
+         if isinstance(goal['goal_options'], dict)
+         else goal['goal_options']
+     )

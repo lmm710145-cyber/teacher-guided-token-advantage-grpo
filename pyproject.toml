@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-distillation-lab"
+version = "0.1.0"
+description = "ALFWorld and WebShop SFT, GRPO, OPD and teacher-guided token advantages"
+requires-python = ">=3.10,<3.13"
+
+[tool.setuptools]
+packages = ["training", "scripts"]
+
+[tool.ruff.lint]
+select = ["F821", "F822", "F823"]
