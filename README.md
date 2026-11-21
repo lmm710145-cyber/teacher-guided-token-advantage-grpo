@@ -1,8 +1,6 @@
-# Agent Distillation Lab
+# Teacher-Guided Token Advantage GRPO
 
 面向 **ALFWorld / WebShop** 的单卡 agent 训练代码：Qwen3-4B 教师 SFT → GRPO、Qwen3-1.7B 学生 SFT 冷启动，以及学生 GRPO、OPD、OPD+GRPO、teacher top-K token-level advantage + GRPO。
-
-学生实际型号为 **Qwen3-1.7B**，不是 1.4B。模型和 adapter 路径均由配置传入。本仓库提供训练实现、固定数据划分、环境补丁与运行命令，不提供实验结果或历史 checkpoint 选择。
 
 ## 方法与代码
 
